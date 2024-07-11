@@ -1,0 +1,38 @@
+.regulations-area .container {
+    background-color: rgb(73, 222, 125);
+    min-width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 3px solid rgb(84, 84, 84);
+    color: #000;
+    flex-direction: column;
+    text-indent: 2em;
+    overflow: auto;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    background-color: aqua;
+    padding: 0em 20px;
+}
+
+
+li {
+    display: block;
+    text-align: left;
+}
+
+.warn li{
+    font-weight: bold;
+    background-color: red;
+}
+
+
+/* li:not(:nth-child(3n)) {
+    стиль для всех дочерних элементов кроме третьего
+} */
+

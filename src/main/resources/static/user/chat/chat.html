@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <link rel="shortcut icon" href="../../welcome/img/favicon.ico">
+    <link rel="stylesheet" href="../../welcome/css/stylesWelcome.css" class="style">
+    <link rel="stylesheet" href="../css/stylesChat.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/chatJS.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../../index.html" class="header-logo">
+                <img src="../../welcome/img/logo.jpg" class="header-logo-img" alt="logo" width="60" height="40">
+            </a>
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-list-item">
+                        <a href="../../index.html" class="header-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="header-list-item">
+                        <a href="../../welcome/chatRegulations.html" class="header-link">
+                            Chat regulations
+                        </a>
+                    </li>
+                    <li class="header-list-item">
+                        <a href="../../welcome/contact.html" class="header-link">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="header-list-item" id="header-my-page-item">
+                        <a href="../userInfo/userinfo.html" class="header-link">
+                            My page
+                        </a>
+                    </li>
+                    <li class="header-list-item" id="header-chat-item">
+                        <a href="./chat.html" class="header-link" id="active">
+                            Chat
+                        </a>
+                    </li>
+                    <li class="header-list-item" id="header-signor-console-item">
+                        <a href="../../admin/signorConsole/signorConsole.html" class="header-link">
+                            Signor Console
+                        </a>
+                    </li>
+                    <li class="header-list-item" id="header-admin-console-item">
+                        <a href="../../admin/adminConsole/adminConsole.html" class="header-link">
+                            Admin Console
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="btn-reset burger">
+                <span class="burger___line"></span>
+                <span class="burger___line"></span>
+                <span class="burger___line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="welcome-area">
+            <div class="container">
+                <div class="chat-list-area">Chats:
+                    <ul class="chat-list">
+                    </ul>
+                </div>
+
+                <div class="messages-of-chat">
+                    <div class="messages-of-chat-head-menu">
+                        <button class="chats-menu-botton">
+                            <span class="burger___line"></span>
+                            <span class="burger___line"></span>
+                            <span class="burger___line"></span>
+                            <div class="chats-menu-name">CHATS</div>
+                        </button>
+                        <button class="users-menu-botton">
+                            <span class="burger___line"></span>
+                            <span class="burger___line"></span>
+                            <span class="burger___line"></span>
+                            <div class="users-menu-name">USERS</div>
+                        </button>
+                    </div>
+                    <div class="messages-field">
+                        <div class="chat-messages-fields">
+                        </div>
+                    </div>
+                    <form class="new-message-form">
+                        <textarea class="input-text" rows="3"></textarea>
+                        <button type="submit" class="send-message-button">Send</button>
+                    </form>
+                </div>
+
+                <div class="users-list-area">Users:
+                    <ul class="users-list">
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

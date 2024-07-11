@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: url('https://example.com/background-image.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.input-field {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    background-color: inherit;
+}
+
+.login-area{
+    margin-bottom: 5px;
+    background-color: #38bbd2;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.password-area {
+    margin-bottom: 5px;
+    background-color: #38bbd2;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.email-area{
+    background-color: #38bbd2;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.password-area img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.user-simbol, .email-simbol, .error-simbol{
+    font-size: 30px;
+    cursor: default;
+}
+
+.error-area{
+    background-color: #38bbd2;
+    border-radius: 5px;
+    border: 1px solid #fb1717;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+.error-message{
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    background-color: inherit;
+}
+
+
+
+#button-start-register{
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My PSC admin console</title>
+    <link rel="shortcut icon" href="../../welcome/img/favicon.ico">
+    <link rel="stylesheet" href="../../welcome/css/stylesWelcome.css" class="style">
+    <link rel="stylesheet" href="../css/signorCons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/signorConsoleJS.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../../index.html" class="header-logo">
+                <img src="../../welcome/img/logo.jpg" class="header-logo-img" alt="logo" width="60" height="40">
+            </a>
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-list-item">
+                        <a href="../../index.html" class="header-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="header-list-item">
+                        <a href="../../welcome/chatRegulations.html" class="header-link">
+                            Chat regulations
+                        </a>
+                    </li>
+                    <li class="header-list-item">
+                        <a href="../../welcome/contact.html" class="header-link">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="header-list-item" id="header-my-page-item">
+                        <a href="../../user/userInfo/userinfo.html" class="header-link">
+                            My page
+                        </a>
+                    </li>
+                    <li class="header-list-item" id="header-chat-item">
+                        <a href="../../user/chat/chat.html" class="header-link">
+                            Chat
+                        </a>
+                    </li>
+                    <li class="header-list-item" id="header-signor-console-item">
+                        <a href="./signorConsole.html" class="header-link"  id="active">
+                            Signor Console
+                        </a>
+                    </li>
+                    <li class="header-list-item" id="header-admin-console-item">
+                        <a href="../adminConsole/adminConsole.html" class="header-link">
+                            Admin Console
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="btn-reset burger">
+                <span class="burger___line"></span>
+                <span class="burger___line"></span>
+                <span class="burger___line"></span>
+            </button>
+        </div>
+    </header>
+
+    
+    <main>
+        <section class="console-select-user">
+            <div class="container head-menu">
+                <div class="select-user-head-menu">
+                    <button class="work-with-users-list-menu-botton">
+                        <span class="burger___line"></span>
+                        <span class="burger___line"></span>
+                        <span class="burger___line"></span>
+                        <div class="work-with-users-list-menu-name">Users list for work</div>
+                    </button>
+                    <button class="create-new-chat-list-menu-botton">
+                        <span class="burger___line"></span>
+                        <span class="burger___line"></span>
+                        <span class="burger___line"></span>
+                        <div class="create-new-chat-list-menu-name">Users list for chats</div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="console-work-with-users">
+            <div class="container">
+                <div class="head-console work-with-users">
+                    <h2 class="container-header-text">Work with users</h2>
+                </div>
+                <div class="body-console work-with-users">
+                    <div class="users-list-area work-with-users">Users:
+                        <ul class="users-list work-with-users">
+                        </ul>
+                    </div>
+                    <div class="work-area">
+                        <div class="user-warning-list-area">Warnings:
+                            <ul class="user-warning-list">
+                            </ul>
+                        </div>
+                        <div class="action-with-user-area">
+                            <div class="user-blocked-time-area">Block time:
+                                <input class="input-block-time" type="number" placeholder="Block time in hours">
+                            </div>
+                            <div class="user-blocked-time-area">Reason:
+                                <textarea id="textarea-block-reason" rows="3"></textarea>
+                            </div>
+                            <button class="block-user-button">BLOCK USER</button>
+                            <button class="unblock-user-button">UNBLOCK USER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="console-create-new-chat">
+            <div class="container">
+                <div class="head-console create-new-chat">
+                    <h2 class="container-header-text">Create new chat</h2>
+                </div>
+                <div class="body-console create-new-chat">
+                    <div class="users-list-area create-new-chat">Users:
+                        <ul class="users-list create-new-chat">
+                        </ul>
+                    </div>
+                    <div class="work-area">
+                        <div class="users-to-new-chat-area">New chat users:
+                            <ul class="users-to-new-chat-list">
+                            </ul>
+                        </div>
+                        <div class="create-new-chat-area">
+                            <div class="name-new-chat-area">NAME:
+                                <input class="input-name-new-chat" type="text" placeholder="Name new Chat">
+                            </div>
+                            <button class="create-new-chat-button">Create new chat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

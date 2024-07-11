@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="shortcut icon" href="../welcome/img/favicon.ico">
+    <link rel="stylesheet" href="../welcome/css/stylesAuth.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../welcome/js/authJS.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form class="login-form">
+            <div class="login-area">
+                <input type="text" class="input-field" id="input-field-login" placeholder="Username"><br>
+                <div class="user-simbol">🐱</div>
+
+            </div>
+            <div class="password-area">
+                <input type="password" class="input-field" id="input-field-password" placeholder="Password"><br>
+                <img src="../welcome/img/eye-closed.png" alt="eye" id="eyeIcon">
+            </div>
+        </form>
+        
+        <div class="email-area">
+            <input type="email" class="input-field" id="input-field-email" placeholder="Email"><br>
+            <div class="email-simbol">📧</div>
+        </div>
+        <div class="error-area">
+            <div class="error-message"></div>
+            <div class="error-simbol">⚠️</div>
+        </div>
+        <button type="submit" class="button" id="button-login">Sign In</button>
+        <button class="button" id="button-start-register">Send Application</button>
+        <button class="button" id="button-register">Register</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+version: "3.9"
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: "someSecretKey"
+    tokenExpiration: "PT15M"
+    refreshTokenExpiration: "PT30M"
+  security:
+    type: db
+
+
+firstChat:
+  name: basic-chat
+
+spring:
+  datasource:
+#    for localhost start:
+#    username: root
+#    password: password
+#    url: jdbc:mysql://localhost:3306/mypsch_db?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true
+
+    username: user
+    password: password
+    url: jdbc:mysql://mysqldb:3306/mypsch_db
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
