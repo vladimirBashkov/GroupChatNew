@@ -1,8 +1,13 @@
 FROM maven:3.9.8-eclipse-temurin-21
 
-WORKDIR /app
+ENV HOME=/app
+RUN mkdir -p $HOME
+ADD pom.xml $HOME
+ADD ./src $HOME/src
+RUN mvn -f $HOME/pom.xml clean package
 
-COPY target/GroupChatNew-0.0.1.jar app.jar
+WORKDIR $HOME
+
 EXPOSE 8080
 
-ENTRYPOINT [ "java", "-jar", "app.jar" ]
+ENTRYPOINT [ "java", "-jar", "./target/GroupChatNew-0.0.1.jar" ]
