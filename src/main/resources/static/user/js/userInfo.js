@@ -221,6 +221,7 @@ $(function () {
                 userData.roles = [];
                 let userData_serialized = JSON.stringify(userData);
                 window.localStorage.setItem("protected-chat-user-data", userData_serialized);
+                window.localStorage.setItem("protected-chat-token", "");
                 alert(response.message);
                 window.location.href = "../../index.html";
             },

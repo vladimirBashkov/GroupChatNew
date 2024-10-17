@@ -132,7 +132,6 @@ public class SecurityService {
                 .chats(chats)
                 .build();
         userRepository.save(user);
-        System.out.println(user.getChats().size());
     }
 
     public void register(CreateUserRequest createUserRequest){
@@ -189,6 +188,7 @@ public class SecurityService {
             Long userId = securityUser.getId();
             deleteToken(userId);
         }
+        SecurityContextHolder.clearContext();
     }
 
     @Transactional

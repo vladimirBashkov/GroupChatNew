@@ -5,7 +5,7 @@ server:
 app:
   jwt:
     secret: "someSecretKey"
-    tokenExpiration: "PT15M"
+    tokenExpiration: "PT5M"
     refreshTokenExpiration: "PT30M"
   security:
     type: db
@@ -16,11 +16,12 @@ firstChat:
 
 spring:
   datasource:
-#    for localhost start:
+##    for localhost start:
 #    username: root
 #    password: password
 #    url: jdbc:mysql://localhost:3306/mypsch_db?useSSL=false&requireSSL=false&allowPublicKeyRetrieval=true
 
+##    for docker server start:
     username: user
     password: password
     url: jdbc:mysql://mysqldb:3306/mypsch_db

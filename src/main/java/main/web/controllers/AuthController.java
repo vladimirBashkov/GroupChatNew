@@ -18,7 +18,6 @@ import org.springframework.web.context.request.RequestContextHolder;
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthController {
-    private final UserRepository userRepository;
     private final SecurityService securityService;
 
     @PostMapping("/signin")
@@ -39,12 +38,5 @@ public class AuthController {
     @PostMapping(path = "/refresh-token",  consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     public ResponseEntity<RefreshTokenResponse> refreshToken(RefreshTokenRequest request){
         return ResponseEntity.ok(securityService.refreshToken(request));
-    }
-
-    @PostMapping(path = "/logout",  consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    @PreAuthorize("hasAnyRole('USER', 'OLD', 'SIGNOR', 'ADMIN')")
-    public ResponseEntity<SimpleResponse> logoutUser(@AuthenticationPrincipal UserDetails userDetails){
-        securityService.logout();
-        return ResponseEntity.ok(new SimpleResponse("User logout: " + userDetails.getUsername()));
     }
 }
