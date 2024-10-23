@@ -39,4 +39,9 @@ public class AuthController {
     public ResponseEntity<RefreshTokenResponse> refreshToken(RefreshTokenRequest request){
         return ResponseEntity.ok(securityService.refreshToken(request));
     }
+
+    @GetMapping("/test")
+    public ResponseEntity<SimpleResponse> testRequestForAndroid(){
+        return ResponseEntity.ok(new SimpleResponse("Test is done. Nothing new for You"));
+    }
 }
